@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #0E1555;  
+  --color-secondary: #4E1184; 
+  --color-accent: #932B77;    
+  --color-highlight: rgba(253, 54, 126, 1);
+  --color-background: #B7B5B6; 
+
+  /* Nutral Colors */
+  --color-white: #ffffff;
+  --color-light-gray: #f8f9fa;
+  --color-gray: #e0e0e0;
+  --color-dark-gray: #555555;
+  --color-black: #000000;
+
+  /* Text */
+  --text-main: #222222;
+  --text-light: #f8f9fa;
+  --text-muted: #888888;
+
+  /* Size */
+  --radius: 12px;
+  --transition: 0.3s ease;
+  --max-width: 1200px;
+
+  /* Font */
+  --font-family: Vazirmatn, sans-serif;
+}

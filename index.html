@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سرویس دَنگی</title>
+
+  <!-- Vazirmatn Font -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="assets/logo.jpg" alt="Dangi Logo" class="logo">
+      <h1>سرویس دُنگی</h1>
+      <p class="tagline">تسویه آسون، دوستی موندگار</p>
+    </div>
+  </header>
+
+
+
+  <!-- ===== Main (Start Page) ===== -->
+    <main class="main start-step">
+        <div class="illustration">
+            <img src="assets/start-illustration.png" alt="شروع دَنگی">
+        </div>
+        <button class="btn">شروع کنید!</button>
+    </main>
+
+  <!-- ===== Step 1 ===== -->
+    <section class="step step-1">
+    <div class="container">
+        <!-- Gueide -->
+        <div class="sidebar">
+            <h4>راهنمایی</h4>
+            <p>
+                لازمه که در این مرحله، تعداد افرادی رو که می‌خواید دنگ‌شون رو محاسبه کنید، وارد کنید.
+                فرض کنید با اکیپ‌تون امروز رفتید بیرون و هرکس چندین تراکنش انجام داده (و شاید بعضی‌ها هیچ تراکنشی انجام نداده باشن یا حتی توی دنگ هم نباشن! مهم نیست)
+                کافیه تعداد اعضای اکیپتون رو اینجا وارد کنید و بعد دکمه «بعدی» رو بزنید.
+            </p>
+        </div>
+        <!-- Main -->
+        <div class="step-content">
+            <label for="num-people" class="step-label">تعداد افراد را وارد کنید</label>
+            <input type="number" id="num-people" class="step-input" placeholder="مثلاً: ۵">
+            <button id="next-btn" class="btn">بعدی</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <ul>
+                <li class="active">تعداد افراد</li>
+                <li>اسامی افراد</li>
+                <li>تعداد تراکنش‌ها</li>
+                <li>جزئیات تراکنش‌ها</li>
+                <li>نتیجه</li>
+            </ul>
+        </div>
+    </div>
+    </section>
+
+  <!-- ===== Step 2 ===== -->
+    <section class="step step-2">
+        <div class="container">           
+            <div class="sidebar">
+                <h4>راهنمایی</h4>
+                <p>
+                    در این قسمت باید اسامی افراد رو وارد کنید. توجه کنید که اسامی افراد در هیچ پایگاه‌داده‌ای ذخیره نمیشن و تنها هدف از دریافت نام شما و دوستاتون اینه که در مرحله آخر نشون بدیم که چه کسی دقیقا باید چه مبلغی به چه کس دیگه‌ای بده. پس راحت باشید و از هر اسمی که در انتها براتون یادآور اون شخص خاص هستش استفاده کنید :)
+                </p>
+            </div>
+
+            <div class="step-content">
+                <label class="step-label">نام افراد را وارد کنید</label>
+
+                <div id="name-fields" class="name-fields"></div>
+
+                <button class="btn">بعدی</button>
+            </div>
+
+            <div class="progress-bar">
+                <ul>
+                    <li>تعداد افراد</li>
+                    <li class="active">اسامی افراد</li>
+                    <li>تعداد تراکنش‌ها</li>
+                    <li>جزئیات تراکنش‌ها</li>
+                    <li>نتیجه</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+  <!-- ===== Step 3 ===== -->
+    <section class="step step-1">
+        <div class="container">
+            <!-- Gueide -->
+            <div class="sidebar">
+                <h4>راهنمایی</h4>
+                <p>
+                    حالا در این مرحله باید تعداد تراکنش‌ها رو وارد کنید. فرض کنید در یک روز عادی با دوستانتون رفتید بیرون و هرکسی یک تراکنشی انجام داده! مثلا یکی پول سفر اسنپ رو حساب کرده، یکی از رستوران سفارش داده  و یکی هم بلیط سینما رو خریده. شما باید در این مرحله، تعداد کل تراکنش‌هایی که همتون رو هم انجام دادید رو وارد کنید. در مثال فوق، سه تراکنش .
+                </p>
+            </div>
+            <!-- Main -->
+            <div class="step-content">
+                <label for="num-transactions" class="step-label">تعداد تراکنش‌ها را وارد کنید</label>
+                <input type="number" id="num-transactions" class="step-input" placeholder="مثلاً: ۲">
+                <button id="next-btn" class="btn">بعدی</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <ul>
+                    <li>تعداد افراد</li>
+                    <li>اسامی افراد</li>
+                    <li class="active">تعداد تراکنش‌ها</li>
+                    <li>جزئیات تراکنش‌ها</li>
+                    <li>نتیجه</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Step 4 ===== -->
+    <section id="step-4" class="step hidden">
+    <div class="container">   
+        <!-- Sidebar -->
+        <div class="sidebar">
+        <h4>راهنمایی</h4>
+        <p>
+            و در نهایت در این مرحله کافیه تا اطلاعات مربوط به هر تراکنش رو ثبت کنید. نام پرداخت‌کننده و افراد سهیم رو از لیست افرادی که در مرحله دوم اسمشون رو ثبت کردید انتخاب کنید. برای افراد سهیم میتونید چند نفر رو انتخاب کنید. برای مبلغ هم دقت کنید که به ریال وارد کنید. ریال رو انتخاب کردیم تا راحت‌تر عدد رو از رسید تراکنش بخونید و وارد کنید. باید این مرحله رو برای هر تعداد تراکنشی که در مرحله قبل وارد کرده بودید تکرار کنید.
+        </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="step-content">
+            <h2 class="step-label">جزئیات تراکنش‌ها را وارد کنید</h2>
+            <h3 class="transaction-title">تراکنش اول</h3>
+
+        <div class="form-group">
+            <label for="payer" class="form-label">نام پرداخت‌کننده:</label>
+            <select id="payer" class="form-input">
+                <option value="">از لیست افراد وارد شده انتخاب کنید</option>
+                <option value="علی">علی</option>
+                <option value="سارا">سارا</option>
+                <option value="حسین">حسین</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="amount" class="form-label">مبلغ تراکنش (ریال):</label>
+            <input type="number" id="amount" class="form-input" placeholder="مثلاً ۶۰۰۰۰۰" />
+        </div>
+
+        <div class="form-group">
+            <label for="participants" class="form-label">افراد سهیم در تراکنش:</label>
+            <select id="participants" class="form-input" multiple>
+                <option value="علی">علی</option>
+                <option value="سارا">سارا</option>
+                <option value="حسین">حسین</option>
+            </select>
+        </div>
+
+        <button class="btn">بعدی</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <ul>
+                <li>تعداد افراد</li>
+                <li>اسامی افراد</li>
+                <li>تعداد تراکنش‌ها</li>
+                <li>جزئیات تراکنش‌ها</li>
+                <li class="active">نتیجه</li>
+            </ul>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- ===== Step 6 (Result) ===== -->
+    <section id="step-6" class="step hidden">
+    <div class="container">
+
+        <!-- Sidebar (راهنما) -->
+        <div class="sidebar">
+        <h4>راهنمایی</h4>
+        <p>
+            و بالاخره هفت‌خوان رستم تموم شد! این شما و این لیست کامل بدهکارا و طلبکارای روز پرخرج شما!!
+            بدهکارا و طلبکارا هرکدوم با مبلغ مشخص خودشون لیست شدن و در نهایت با کمک یک الگوریتم تسویه هوشمند هم می‌تونید حساب‌وکتابا رو راحت‌تر انجام بدید!
+            امیدواریم لذت برده باشید :)
+        </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="step-content">
+        <h2 class="step-label">نتیجه</h2>
+
+        <div class="result-box">
+            <div class="result-column">
+            <h3>طلبکار</h3>
+            <div class="result-item">
+                <p>علی</p>
+                <span>۴۵۰٬۰۰۰</span>
+            </div>
+            </div>
+
+            <div class="result-column">
+            <h3>بدهکار</h3>
+            <div class="result-item">
+                <p>سارا</p>
+                <span>۲۳۰٬۰۰۰</span>
+            </div>
+            <div class="result-item">
+                <p>حسین</p>
+                <span>۲۲۰٬۰۰۰</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="summary-box">
+            <p>سارا باید به علی مبلغ ۲۳۰٬۰۰۰ ریال بدهد.</p>
+            <p>حسین باید به علی مبلغ ۲۲۰٬۰۰۰ ریال بدهد.</p>
+        </div>
+
+        <button id="back-home" class="btn btn-primary">بازگشت به خانه</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+        <ul>
+            <li>تعداد افراد</li>
+            <li>اسامی افراد</li>
+            <li>تعداد تراکنش‌ها</li>
+            <li>جزئیات تراکنش‌ها</li>
+            <li class="active">نتیجه</li>
+        </ul>
+        </div>
+
+    </div>
+    </section>
+
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-info">
+        <div class="about">
+            <h4>درباره پروژه</h4>
+            <p>
+            سرویس دُنگی یک ابزار ساده و آنلاین برای مدیریت خرج‌های گروهی است. ایده‌ی آن
+            از یک نیاز روزمره شکل گرفت؛ وقتی چند نفر با هم به سفر، رستوران یا تفریح می‌روند
+            و در پایان روز حساب‌و‌کتاب‌ها پیچیده می‌شود.
+            </p>
+            <p>
+            هدف دُنگی این است که با چند کلیک، سهم هر فرد مشخص شود و در نهایت با کمترین
+            تعداد تراکنش همه‌ی حساب‌ها صاف شود. دَنگی ساخته شد تا رفاقت‌ها بماند
+            و حساب‌ها روشن و شفاف باشند.
+            </p>
+        </div>
+        <div class="notice">
+            <h4>توجه!</h4>
+            <p>
+            این پروژه به شکل متن‌باز در گیت‌هاب موجود می‌باشد و از توسعه‌دهندگان گرامی
+            در راستای بهبود و ارتقای آن دعوت صمیمانه به عمل می‌آوریم.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="Project Logo" class="footer-logo">
+        <h3>پروژه دُنگی</h3>
+        <p>نسخه 1.0.0</p>
+        <div class="social-links">
+        <a href="https://linkedin.com/in/ramangorgin" target="_blank">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/ramangorgin/dongi" target="_blank">
+            <img src="assets/icons/github.png" alt="GitHub">
+        </a>
+        </div>
+    </div>
+  </footer>
+
+  <div class="copyright-bar">
+    <span>۱۴۰۴ - کپی لفت؛ هیچ حقی محفوظ نیست!</span>
+    <span>طراحی شده توسط <strong>رامان گرگین پاوه</strong></span>
+  </div>
+
+
+  <!-- JS -->
+  <script src="js/storage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+</body>
+</html>
