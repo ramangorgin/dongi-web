@@ -128,66 +128,58 @@
 
     <!-- ===== Step 4 ===== -->
     <section class="step step-4">
-    <div class="container">   
-        <!-- Sidebar -->
-        <div class="sidebar">
-        <h4>راهنمایی</h4>
-        <p>
-            و در نهایت در این مرحله کافیه تا اطلاعات مربوط به هر تراکنش رو ثبت کنید. نام پرداخت‌کننده و افراد سهیم رو از لیست افرادی که در مرحله دوم اسمشون رو ثبت کردید انتخاب کنید. برای افراد سهیم میتونید چند نفر رو انتخاب کنید. برای مبلغ هم دقت کنید که به ریال وارد کنید. ریال رو انتخاب کردیم تا راحت‌تر عدد رو از رسید تراکنش بخونید و وارد کنید. باید این مرحله رو برای هر تعداد تراکنشی که در مرحله قبل وارد کرده بودید تکرار کنید.
-        </p>
+        <div class="container">   
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h4>راهنمایی</h4>
+                <p>
+                    و در نهایت در این مرحله کافیه تا اطلاعات مربوط به هر تراکنش رو ثبت کنید. نام پرداخت‌کننده و افراد سهیم رو از لیست افرادی که در مرحله دوم اسمشون رو ثبت کردید انتخاب کنید. برای افراد سهیم میتونید چند نفر رو انتخاب کنید. برای مبلغ هم دقت کنید که به ریال وارد کنید. ریال رو انتخاب کردیم تا راحت‌تر عدد رو از رسید تراکنش بخونید و وارد کنید. باید این مرحله رو برای هر تعداد تراکنشی که در مرحله قبل وارد کرده بودید تکرار کنید.
+                </p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="step-content">
+                <h2 class="step-label" id="transaction-step-title">جزئیات تراکنش ۱ از ۱ را وارد کنید</h2>
+                
+                <div class="form-group">
+                    <label for="payer" class="form-label">نام پرداخت‌کننده:</label>
+                    <select id="payer" class="form-input">
+                        <option value="">از لیست افراد وارد شده انتخاب کنید</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount" class="form-label">مبلغ تراکنش (ریال):</label>
+                    <input type="number" id="amount" class="form-input" placeholder="مثلاً ۶۰۰۰۰۰" />
+                </div>
+
+                <div class="form-group">
+                    <label for="participants" class="form-label">افراد سهیم در تراکنش:</label>
+                    <select id="participants" class="form-input" multiple>
+                    </select>
+                </div>
+
+                <button id="next-transaction" class="btn">بعدی</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <ul>
+                    <li>تعداد افراد</li>
+                    <li>اسامی افراد</li>
+                    <li>تعداد تراکنش‌ها</li>
+                    <li class="active">جزئیات تراکنش‌ها</li>
+                    <li>نتیجه</li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Main Content -->
-        <div class="step-content">
-            <h2 class="step-label">جزئیات تراکنش‌ها را وارد کنید</h2>
-            <h3 class="transaction-title">تراکنش اول</h3>
-
-        <div class="form-group">
-            <label for="payer" class="form-label">نام پرداخت‌کننده:</label>
-            <select id="payer" class="form-input">
-                <option value="">از لیست افراد وارد شده انتخاب کنید</option>
-                <option value="علی">علی</option>
-                <option value="سارا">سارا</option>
-                <option value="حسین">حسین</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="amount" class="form-label">مبلغ تراکنش (ریال):</label>
-            <input type="number" id="amount" class="form-input" placeholder="مثلاً ۶۰۰۰۰۰" />
-        </div>
-
-        <div class="form-group">
-            <label for="participants" class="form-label">افراد سهیم در تراکنش:</label>
-            <select id="participants" class="form-input" multiple>
-                <option value="علی">علی</option>
-                <option value="سارا">سارا</option>
-                <option value="حسین">حسین</option>
-            </select>
-        </div>
-
-        <button class="btn">بعدی</button>
-        </div>
-
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-            <ul>
-                <li>تعداد افراد</li>
-                <li>اسامی افراد</li>
-                <li>تعداد تراکنش‌ها</li>
-                <li class="active">جزئیات تراکنش‌ها</li>
-                <li>نتیجه</li>
-            </ul>
-        </div>
-
-    </div>
     </section>
 
     <!-- ===== Step 5 ===== -->
     <section class="step step-6">
     <div class="container">
 
-        <!-- Sidebar (راهنما) -->
+        <!-- Sidebar -->
         <div class="sidebar">
         <h4>راهنمایی</h4>
         <p>
@@ -228,7 +220,7 @@
             <p>حسین باید به علی مبلغ ۲۲۰٬۰۰۰ ریال بدهد.</p>
         </div>
 
-        <button id="back-home" class="btn btn-primary">بازگشت به خانه</button>
+        <button id="back-home" class="btn">بازگشت به خانه</button>
         </div>
 
         <!-- Progress Bar -->
@@ -295,7 +287,8 @@
 
   <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    <script src="js/flow.js"></script>
+    <script src="js/algorithm.js"></script>
+    <script type="module" src="js/flow.js"></script>
 
 </body>
 </html>

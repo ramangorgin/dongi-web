@@ -114,9 +114,9 @@
   background-color: var(--color-secondary);
   border-radius: 5px;
   width: 400px;
-  margin-right: 86px;
   height: 60px;
-  padding-top: 13px;  
+  padding-top: 13px;
+  justify-self: center;  
 }
 
 .step-input {
@@ -210,6 +210,7 @@
   color: #222;
   margin-bottom: 0.4rem;
   text-align: right;
+  margin-top: 15px;
 }
 
 .form-input {
@@ -355,8 +356,7 @@
   text-align: center;
   font-weight: bold;
   line-height: 1.8;
-  width: 83%;
-  max-width: 600px;
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -367,3 +367,51 @@
 
 
 
+/* ===== Responsive Layout for Mobile ===== */
+@media (max-width: 768px) {
+
+  /* پنهان کردن نوار پیشرفت و راهنما */
+  .sidebar,
+  .progress-bar {
+    display: none !important;
+  }
+
+  /* محتوا باید کل عرض رو بگیره */
+  .step-content {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  /* برای هماهنگی با حذف ستون‌ها */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* ورودی‌ها و دکمه‌ها */
+  .step-content input,
+  .step-content select,
+  .step-content .btn {
+    width: 90%;
+    max-width: 400px;
+    margin: 0.5rem auto;
+  }
+
+  .header {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .footer > div {
+    margin: 1rem 0;
+  }
+}
