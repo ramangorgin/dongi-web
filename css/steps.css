@@ -1,8 +1,25 @@
-/* ===== Start Step ===== */
+.step {
+  display: none;
+}
+
+.step.active {
+  display: flex;
+}
+
+.start-step.active {
+  display: flex; 
+}
+
+
 .start-step {
+  display: none; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
   text-align: center;
-  padding: 3rem 1rem;
-  background: var(--color-light);
+  min-height: 400px;
+  padding: 2rem 1rem;
+  gap: 1rem; 
 }
 
 .start-step .illustration {
@@ -14,7 +31,7 @@
   font-size: 1.2rem;
   padding: 1rem 3rem;
 }
-/* ===== Step 1 ===== */
+
 .step {
   background: var(--color-background);
   padding: 3rem 2rem;
@@ -167,7 +184,6 @@
   text-justify: inter-word;
 }
 
-/* ==== Step 4 ==== */
 .transaction-title{
   display: block;
   font-size: 1rem;
@@ -213,38 +229,10 @@
 .form-input:focus {
   outline: 2px solid var(--color-secondary);
 }
-/* ==== Step 4 Layout Fix ==== */
-#step-4 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
 
-/* مرکز اصلی (فرم تراکنش) */
-#step-4 .step-content {
-  flex: 1;
-  text-align: center;
-}
 
-/* عنوان بنفش */
-#step-4 .step-label {
-  display: block;
-  background: var(--color-secondary);
-  color: var(--color-white);
-  padding: 1rem;
-  border-radius: 6px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin: 0 auto 1rem;
-  width: 400px;
-}
 
-/* تراکنش صورتی */
-#step-4 .transaction-title {
+.transaction-title {
   background: var(--color-accent);
   color: var(--color-white);
   border-radius: 6px;
@@ -254,14 +242,13 @@
   font-weight: bold;
 }
 
-/* فیلدهای فرم */
-#step-4 .form-group {
+.form-group {
   text-align: right;
   margin: 0 auto 1rem;
   width: 400px;
 }
 
-#step-4 .form-label {
+.form-label {
   display: block;
   font-size: 1rem;
   font-weight: 600;
@@ -269,7 +256,7 @@
   margin-bottom: 0.4rem;
 }
 
-#step-4 .form-input {
+.form-input {
   width: 100%;
   height: 50px;
   border-radius: 8px;
@@ -309,72 +296,11 @@
     overflow: hidden;
 }
 
-#step-4 .form-input:focus {
+.form-input:focus {
   outline: 2px solid var(--color-secondary);
 }
 
 
-/* هماهنگی سایدبار و نوار پیشرفت */
-#step-4 .sidebar {
-  width: 22%;
-  background: #d7cdd1;
-  border-radius: 10px;
-  padding: 1.5rem;
-}
-
-#step-4 .sidebar h4 {
-  color: var(--color-accent);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-#step-4 .sidebar p {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: var(--color-accent);
-  text-align: justify;
-}
-
-#step-4 .progress-bar {
-  width: 20%;
-  position: relative;
-}
-
-/* ===== Step 6 ===== */
-#step-6 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-/* محتوا (وسط) */
-#step-6 .step-content {
-  flex: 1;
-  text-align: center;
-  padding: 0rem 3rem;
-}
-
-/* عنوان اصلی */
-#step-6 .step-label {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--color-white);
-  margin-bottom: 0;
-  background-color: var(--color-secondary);
-  border-radius: 5px;
-  width: 400px;
-  margin-right: 40px;
-  height: 60px;
-  padding-top: 13px;  
-}
-
-/* بخش نتایج طلبکار/بدهکار */
 .result-box {
   display: flex;
   justify-content: center;
@@ -419,7 +345,6 @@
   color: #333;
 }
 
-/* باکس خلاصه نهایی */
 .summary-box {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
@@ -440,53 +365,5 @@
   margin: 0.5rem 0;
 }
 
-/* دکمه */
-#step-6 .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Vazirmatn, sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 10px;            
-  font-size: 1.2rem;             
-  width: 400px;                
-  height: 50px;                   
-  transition: transform 0.2s ease, background 0.3s ease;
-  border: 2px solid #ffffff;     
-  background: var(--color-highlight); 
-  color: var(--color-white);  
-}
 
-#step-6 .btn:hover {
-  background: var(--color-accent);    
-  transform: scale(1.03);  
-}
 
-/* Sidebar */
-#step-6 .sidebar {
-  width: 22%;
-  background: #d7cdd1;
-  border-radius: 10px;
-  padding: 1.5rem;
-}
-
-#step-6 .sidebar h4 {
-  color: var(--color-accent);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-#step-6 .sidebar p {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: var(--color-accent);
-  text-align: justify;
-}
-
-/* Progress Bar */
-#step-6 .progress-bar {
-  width: 20%;
-  position: relative;
-}
