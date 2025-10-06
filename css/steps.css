@@ -28,16 +28,7 @@ html, body {
 }
 
 
-.start-step {
-  display: none; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center;
-  min-height: 400px;
-  padding: 2rem 1rem;
-  gap: 1rem; 
-}
+
 
 */
 
@@ -68,6 +59,17 @@ html, body {
   overflow: hidden;
   min-height: 300px;
   transition: min-height 0.5s ease;
+}
+
+.start-step {
+  display: none; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  min-height: 400px;
+  padding: 2rem 1rem;
+  gap: 1rem; 
 }
 
 
