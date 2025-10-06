@@ -1,3 +1,20 @@
+:root {
+  --font-family: 'Vazirmatn', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+html, body {
+  font-family: var(--font-family);
+}
+
+.form-label,
+.form-input,
+.step-label,
+.summary-box p,
+.result-item span {
+  font-family: var(--font-family) !important;
+}
+
+/*
 .step {
   display: none;
 }
@@ -21,6 +38,38 @@
   padding: 2rem 1rem;
   gap: 1rem; 
 }
+
+*/
+
+/* ==== Step Transition Animations ==== */
+
+.step {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.step.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: all;
+  position: relative;
+}
+
+.steps-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  transition: min-height 0.5s ease;
+}
+
 
 .start-step .illustration {
   max-width: 400px;
@@ -202,6 +251,9 @@
   margin-bottom: 1.3rem;
   display: flex;
   flex-direction: column;
+  text-align: right;
+  margin: 0 auto 1rem;
+  width: 400px;
 }
 
 .form-label {
@@ -243,11 +295,7 @@
   font-weight: bold;
 }
 
-.form-group {
-  text-align: right;
-  margin: 0 auto 1rem;
-  width: 400px;
-}
+
 
 .form-label {
   display: block;
@@ -365,18 +413,67 @@
   margin: 0.5rem 0;
 }
 
+/* ==== Step Transition Animations (Fixed layout) ==== */
+
+body {
+  background-color: #cfcfcf; /* رنگ دلخواه تو */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  flex-shrink: 0;
+}
+
+.main-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px; /* ثابت نگه‌دار ارتفاع بخش مرکزی */
+  background: var(--color-background, transparent);
+}
+
+/* هر step روی هم قرار می‌گیرد اما فقط active دیده می‌شود */
+.step {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: all;
+}
+
+.progress-bar ul li.active {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 
 /* ===== Responsive Layout for Mobile ===== */
 @media (max-width: 768px) {
 
-  /* پنهان کردن نوار پیشرفت و راهنما */
   .sidebar,
   .progress-bar {
     display: none !important;
   }
 
-  /* محتوا باید کل عرض رو بگیره */
   .step-content {
     width: 100%;
     max-width: none;
@@ -384,7 +481,77 @@
     padding: 1rem;
   }
 
-  /* برای هماهنگی با حذف ستون‌ها */
+  .step-label {
+    width: 350px;
+  }
+
+  .step-input {
+    width: 350px !important;
+    margin: 0px;
+  }
+
+  .btn {
+    width: 350px !important;
+    margin: 0px;
+  }
+
+  .form-group {
+    width: 350px !important;
+    margin-bottom: 5px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .summary-box{
+    width: 350px !important;
+    margin: auto !important;  
+  }
+
+  .result-box{
+    gap: 45px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+
+  img{
+    width: 355px;
+  }
+  .start-step {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .copyright-bar {
+      background: var(--color-secondary);
+      color: var(--color-white);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between !important;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      direction: rtl;
+      gap: 10px;
+  }
+
+  .footer-info p {
+    line-height: 1.8;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    text-align: justify;
+  }
+
+  .result-column {
+    padding: 0px;
+    width: 150px;
+  }
+
+  .form-input {
+    width: 350px !important;
+    margin: 0px !important;
+  }
+  .name-input{
+    width: 350px !important;
+    margin: 0px !important;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -392,7 +559,6 @@
     text-align: center;
   }
 
-  /* ورودی‌ها و دکمه‌ها */
   .step-content input,
   .step-content select,
   .step-content .btn {

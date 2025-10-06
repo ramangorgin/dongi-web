@@ -1,11 +1,3 @@
-/**
- * algorithm.js
- * Converted from original C++ version (ExpenseManager project)
- * by Raman Gorgin Paveh
- * --------------------------------------------
- * Handles splitting expenses and smart debt settlement
- */
-
 // ========= Class Person =========
 class Person {
   constructor(name) {
